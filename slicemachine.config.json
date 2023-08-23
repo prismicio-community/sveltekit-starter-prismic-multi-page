@@ -1,0 +1,6 @@
+{
+	"repositoryName": "sveltekit-starter-prismic-multi-page",
+	"adapter": "@slicemachine/adapter-sveltekit",
+	"libraries": ["./src/lib/slices"],
+	"localSliceSimulatorURL": "http://localhost:5173/slice-simulator"
+}
