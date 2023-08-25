@@ -1,6 +1,8 @@
 <script>
-	import { PrismicImage, PrismicLink, PrismicRichText } from '@prismicio/svelte';
+	import { PrismicImage, PrismicLink } from '@prismicio/svelte';
 	import * as prismic from '@prismicio/client';
+
+	import PrismicRichText from '$lib/components/PrismicRichText.svelte';
 
 	/** @type {import("@prismicio/client").Content.ImageCardsSliceDefaultItem} */
 	export let item;

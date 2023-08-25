@@ -1,8 +1,10 @@
 <script>
-	import { PrismicImage, PrismicRichText, PrismicLink } from '@prismicio/svelte';
+	import { PrismicImage, PrismicLink } from '@prismicio/svelte';
 	import * as prismic from '@prismicio/client';
 
 	import Bounded from '$lib/components/Bounded.svelte';
+	import PrismicRichText from '$lib/components/PrismicRichText.svelte';
+
 	import Heading from './Heading.svelte';
 
 	/** @type {import("@prismicio/client").Content.HeroSlice} */
@@ -27,7 +29,7 @@
 				<PrismicRichText
 					field={slice.primary.text}
 					components={{
-						heading1: () => Heading
+						heading1: Heading
 					}}
 				/>
 			</div>

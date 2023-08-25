@@ -1,8 +1,9 @@
 <script>
-	import { PrismicImage, PrismicRichText } from '@prismicio/svelte';
+	import { PrismicImage } from '@prismicio/svelte';
 	import * as prismic from '@prismicio/client';
 
 	import Bounded from '$lib/components/Bounded.svelte';
+	import PrismicRichText from '$lib/components/PrismicRichText.svelte';
 
 	/** @type {import("@prismicio/client").Content.TextWithImageSlice} */
 	export let slice;

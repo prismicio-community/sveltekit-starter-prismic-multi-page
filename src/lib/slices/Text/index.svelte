@@ -1,8 +1,8 @@
 <script>
-	import { PrismicRichText } from '@prismicio/svelte';
 	import clsx from 'clsx';
 
 	import Bounded from '$lib/components/Bounded.svelte';
+	import PrismicRichText from '$lib/components/PrismicRichText.svelte';
 
 	/** @type {import("@prismicio/client").Content.TextSlice} */
 	export let slice;
