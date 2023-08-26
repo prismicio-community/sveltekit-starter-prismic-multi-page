@@ -2,7 +2,7 @@ import { createClient } from '$lib/prismicio';
 
 export const prerender = true;
 
-/** @type {import('./$types').PageLoad} */
+/** @type {import('./$types').PageServerLoad} */
 export async function load({ params }) {
 	const client = createClient();
 

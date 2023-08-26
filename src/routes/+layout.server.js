@@ -1,6 +1,6 @@
 import { createClient } from '$lib/prismicio';
 
-/** @type {import('./$types').LayoutLoad} */
+/** @type {import('./$types').LayoutServerLoad} */
 export async function load() {
 	const client = createClient();
 
