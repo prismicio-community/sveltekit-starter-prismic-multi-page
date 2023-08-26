@@ -16,7 +16,7 @@
 	export let field;
 
 	/** @type {import('svelte').ComponentProps<PrismicRichText>['components']} */
-	export let components;
+	export let components = {};
 </script>
 
 <PrismicRichText
