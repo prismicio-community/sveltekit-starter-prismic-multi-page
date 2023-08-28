@@ -1,38 +1,63 @@
-# create-svelte
+# Prismic + SvelteKit Multi-Page Starter
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+Want to see an example of a multi-page website using [Prismic][prismic] and [SvelteKit][sveltekit]? Look no further! This project provides all the code you need for a personal website with a homepage, information pages, and navigation.
 
-## Creating a project
+- **Demo**: [Open live demo][live-demo]
+- **Learn more about Prismic and SvelteKit**: [Prismic SvelteKit Documentation][prismic-docs]
 
-If you're seeing this, you've probably already done this step. Congrats!
+&nbsp;
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+<img src="https://user-images.githubusercontent.com/8601064/166617932-eaaa1643-f086-4909-9868-56234f8da98d.png" alt="Screenshots of the site seen on deskop and mobile browsers" />
 
-# create a new project in my-app
-npm create svelte@latest my-app
+&nbsp;
+
+## 🚀 Quick Start
+
+To start a new project using this starter, run the following commands in your terminal:
+
+```sh
+npx @slicemachine/init@latest --starter sveltekit-starter-prismic-multi-page
 ```
 
-## Developing
+The commands will do the following:
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+1. Start a new SvelteKit project using this starter.
+2. Ask you to log in to Prismic or [create an account][prismic-sign-up].
+3. Create a new Prismic content repository with sample content.
 
-```bash
+When you're ready to start your project, run the following command:
+
+```sh
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
-## Building
+## Documentation
 
-To create a production version of your app:
+To learn how to work with your new project, [**see this starter's docs**][starter-docs].
 
-```bash
-npm run build
+To learn more about working with Prismic, [**see the Prismic docs**][prismic-docs].
+
+## License
+
+```
+Copyright 2013-2022 Prismic <contact@prismic.io> (https://prismic.io)
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
 ```
 
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+[prismic]: https://prismic.io/
+[prismic-docs]: https://prismic.io/docs/technologies/sveltekit
+[prismic-sign-up]: https://prismic.io/dashboard/signup
+[sveltekit]: https://kit.svelte.dev/
+[starter-docs]: ./docs/README.md
+[live-demo]: https://sveltekit-starter-prismic-multi-page.vercel.app/
