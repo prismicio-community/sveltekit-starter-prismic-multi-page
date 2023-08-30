@@ -14,7 +14,7 @@
 		"slicemachine": "start-slicemachine"
 	},
 	"devDependencies": {
-		"@slicemachine/adapter-sveltekit": "^0.3.10-dev-adapter-svelte-kit.3",
+		"@slicemachine/adapter-sveltekit": "^0.3.13",
 		"@sveltejs/adapter-auto": "^2.1.0",
 		"@sveltejs/kit": "^1.23.0",
 		"@typescript-eslint/eslint-plugin": "^6.4.1",
@@ -27,7 +27,7 @@
 		"postcss": "^8.4.28",
 		"prettier": "^2.8.0",
 		"prettier-plugin-svelte": "^2.10.1",
-		"slice-machine-ui": "^1.10.1-dev-adapter-svelte-kit.3",
+		"slice-machine-ui": "^1.11.0",
 		"svelte": "^4.2.0",
 		"svelte-check": "^3.5.0",
 		"tailwindcss": "^3.3.3",
