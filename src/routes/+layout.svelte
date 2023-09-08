@@ -3,7 +3,6 @@
 
 	import Header from '$lib/components/Header.svelte';
 
-	/** @type {import('./$types').PageData} */
 	export let data;
 </script>
 

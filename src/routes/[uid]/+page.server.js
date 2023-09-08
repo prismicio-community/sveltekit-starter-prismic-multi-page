@@ -2,7 +2,6 @@ import { createClient } from '$lib/prismicio';
 
 export const prerender = true;
 
-/** @type {import('./$types').PageServerLoad} */
 export async function load({ params }) {
 	const client = createClient();
 
@@ -13,7 +12,6 @@ export async function load({ params }) {
 	};
 }
 
-/** @type {import('./$types').EntryGenerator} */
 export async function entries() {
 	const client = createClient();
 
