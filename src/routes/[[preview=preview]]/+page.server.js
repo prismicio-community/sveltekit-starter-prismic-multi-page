@@ -17,5 +17,5 @@ export async function load({ fetch, cookies }) {
 }
 
 export function entries() {
-	return [{ preview: undefined }];
+	return [{}];
 }
