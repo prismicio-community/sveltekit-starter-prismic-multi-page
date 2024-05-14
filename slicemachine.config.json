@@ -1,5 +1,6 @@
 {
-	"repositoryName": "sveltekit-starter-prismic-multi-page",
+	"repositoryName": "marketing",
+  "apiEndpoint": "https://marketing.wroom.io/api/v2",
 	"adapter": "@slicemachine/adapter-sveltekit",
 	"libraries": ["./src/lib/slices"],
 	"localSliceSimulatorURL": "http://localhost:5173/slice-simulator"
