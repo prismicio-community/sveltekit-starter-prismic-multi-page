@@ -14,9 +14,9 @@
 		"slicemachine": "start-slicemachine"
 	},
 	"devDependencies": {
-		"@slicemachine/adapter-sveltekit": "alpha.lh-slice-primary-group-mocks",
+		"@slicemachine/adapter-sveltekit": "^0.3.39",
 		"@sveltejs/adapter-auto": "^3.2.0",
-		"@sveltejs/kit": "^2.5.8",
+		"@sveltejs/kit": "^2.5.9",
 		"@typescript-eslint/eslint-plugin": "^6.21.0",
 		"@typescript-eslint/parser": "^6.21.0",
 		"autoprefixer": "^10.4.19",
@@ -27,7 +27,7 @@
 		"postcss": "^8.4.38",
 		"prettier": "^3.2.5",
 		"prettier-plugin-svelte": "^3.2.3",
-		"slice-machine-ui": "alpha.lh-slice-primary-group-mocks",
+		"slice-machine-ui": "^2.0.0",
 		"svelte": "^4.2.17",
 		"svelte-check": "^3.7.1",
 		"tailwindcss": "^3.4.3",
