@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import '../app.css';
 
 	import { PrismicPreview } from '@prismicio/svelte/kit';

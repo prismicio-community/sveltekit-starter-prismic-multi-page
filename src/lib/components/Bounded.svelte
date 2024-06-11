@@ -1,8 +1,8 @@
-<script>
+<script lang="ts">
 	import clsx from 'clsx';
 
 	export let tag = 'section';
-	export let yPadding = 'base';
+	export let yPadding: 'sm' | 'base' | 'lg' = 'base';
 	export let collapsible = true;
 </script>
 

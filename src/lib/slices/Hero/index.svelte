@@ -1,14 +1,13 @@
-<script>
+<script lang="ts">
+	import { isFilled, type Content } from '@prismicio/client';
 	import { PrismicImage, PrismicLink } from '@prismicio/svelte';
-	import * as prismic from '@prismicio/client';
 
 	import Bounded from '$lib/components/Bounded.svelte';
 	import PrismicRichText from '$lib/components/PrismicRichText.svelte';
 
 	import Heading from './Heading.svelte';
 
-	/** @type {import("@prismicio/client").Content.HeroSlice} */
-	export let slice;
+	export let slice: Content.HeroSlice;
 </script>
 
 <section
@@ -16,7 +15,7 @@
 	data-slice-type={slice.slice_type}
 	data-slice-variation={slice.variation}
 >
-	{#if prismic.isFilled.image(slice.primary.backgroundImage)}
+	{#if isFilled.image(slice.primary.backgroundImage)}
 		<PrismicImage
 			field={slice.primary.backgroundImage}
 			alt=""
@@ -33,7 +32,7 @@
 					}}
 				/>
 			</div>
-			{#if prismic.isFilled.link(slice.primary.buttonLink)}
+			{#if isFilled.link(slice.primary.buttonLink)}
 				<PrismicLink
 					field={slice.primary.buttonLink}
 					class="rounded bg-white px-5 py-3 font-medium text-slate-800"
