@@ -1,9 +1,8 @@
-<script>
+<script lang="ts">
 	import clsx from 'clsx';
 
 	export let tag = 'h1';
-	/** @type {"sm" | "md" | "lg" | "xl"} */
-	export let size = 'lg';
+	export let size: 'sm' | 'md' | 'lg' | 'xl' = 'lg';
 </script>
 
 <svelte:element

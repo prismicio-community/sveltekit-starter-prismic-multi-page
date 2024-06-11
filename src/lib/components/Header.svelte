@@ -1,12 +1,11 @@
-<script>
+<script lang="ts">
+	import type { Content } from '@prismicio/client';
 	import { PrismicLink, PrismicText } from '@prismicio/svelte';
 
 	import Bounded from './Bounded.svelte';
 
-	/** @type {import("@prismicio/client").Content.SettingsDocument} */
-	export let settings;
-	/** @type {import("@prismicio/client").Content.NavigationDocument} */
-	export let navigation;
+	export let settings: Content.SettingsDocument;
+	export let navigation: Content.NavigationDocument;
 </script>
 
 <Bounded tag="header" yPadding="sm">

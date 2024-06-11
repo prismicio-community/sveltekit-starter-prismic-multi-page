@@ -1,13 +1,12 @@
-<script>
+<script lang="ts">
+	import { isFilled, type Content } from '@prismicio/client';
 	import { PrismicText } from '@prismicio/svelte';
-	import * as prismic from '@prismicio/client';
 
 	import Bounded from '$lib/components/Bounded.svelte';
 	import ImageCard from './ImageCard.svelte';
 	import Heading from '$lib/components/Heading.svelte';
 
-	/** @type {import("@prismicio/client").Content.ImageCardsSlice} */
-	export let slice;
+	export let slice: Content.ImageCardsSlice;
 </script>
 
 <Bounded
@@ -17,7 +16,7 @@
 	data-slice-variation={slice.variation}
 >
 	<div class="grid gap-12">
-		{#if prismic.isFilled.richText(slice.primary.heading)}
+		{#if isFilled.richText(slice.primary.heading)}
 			<Heading class="text-center">
 				<PrismicText field={slice.primary.heading} />
 			</Heading>
