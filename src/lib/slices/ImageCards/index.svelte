@@ -22,8 +22,8 @@
 			</Heading>
 		{/if}
 		<ul class="grid grid-cols-1 items-start gap-8 md:grid-cols-2">
-			{#each slice.items as item}
-				<ImageCard {item} />
+			{#each slice.primary.cards as card}
+				<ImageCard {card} />
 			{/each}
 		</ul>
 	</div>

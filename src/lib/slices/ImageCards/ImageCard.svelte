@@ -4,28 +4,28 @@
 
 	import PrismicRichText from '$lib/components/PrismicRichText.svelte';
 
-	export let item: Content.ImageCardsSliceDefaultItem;
+	export let card: Content.ImageCardsSliceDefaultPrimaryCardsItem;
 </script>
 
 <li class="grid gap-8">
-	{#if isFilled.image(item.image)}
+	{#if isFilled.image(card.image)}
 		<div class="bg-gray-100">
-			{#if isFilled.link(item.buttonLink)}
-				<PrismicLink field={item.buttonLink} tabindex={-1}>
-					<PrismicImage field={item.image} sizes="100vw" class="w-full" />
+			{#if isFilled.link(card.buttonLink)}
+				<PrismicLink field={card.buttonLink} tabindex={-1}>
+					<PrismicImage field={card.image} sizes="100vw" class="w-full" />
 				</PrismicLink>
 			{:else}
-				<PrismicImage field={item.image} sizes="100vw" class="w-full" />
+				<PrismicImage field={card.image} sizes="100vw" class="w-full" />
 			{/if}
 		</div>
 	{/if}
 	<div class="leading-relaxed">
-		<PrismicRichText field={item.text} />
+		<PrismicRichText field={card.text} />
 	</div>
-	{#if isFilled.link(item.buttonLink)}
+	{#if isFilled.link(card.buttonLink)}
 		<div>
-			<PrismicLink field={item.buttonLink} class="font-semibold">
-				{item.buttonText || 'More Info'}
+			<PrismicLink field={card.buttonLink} class="font-semibold">
+				{card.buttonText || 'More Info'}
 			</PrismicLink>
 		</div>
 	{/if}
