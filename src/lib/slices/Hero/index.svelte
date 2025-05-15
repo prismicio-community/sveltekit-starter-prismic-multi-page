@@ -7,7 +7,11 @@
 
 	import Heading from './Heading.svelte';
 
-	export let slice: Content.HeroSlice;
+	interface Props {
+		slice: Content.HeroSlice;
+	}
+
+	let { slice }: Props = $props();
 </script>
 
 <section

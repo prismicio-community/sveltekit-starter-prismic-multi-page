@@ -5,8 +5,12 @@
 
 	import Bounded from '$lib/components/Bounded.svelte';
 
-	export let slice: Content.ImageSlice;
-	export let index: number;
+	interface Props {
+		slice: Content.ImageSlice;
+		index: number;
+	}
+
+	let { slice, index }: Props = $props();
 </script>
 
 <Bounded

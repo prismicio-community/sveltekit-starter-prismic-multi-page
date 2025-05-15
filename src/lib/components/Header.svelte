@@ -4,8 +4,12 @@
 
 	import Bounded from './Bounded.svelte';
 
-	export let settings: Content.SettingsDocument;
-	export let navigation: Content.NavigationDocument;
+	interface Props {
+		settings: Content.SettingsDocument;
+		navigation: Content.NavigationDocument;
+	}
+
+	let { settings, navigation }: Props = $props();
 </script>
 
 <Bounded tag="header" yPadding="sm">

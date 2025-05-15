@@ -5,7 +5,11 @@
 
 	import Bounded from '$lib/components/Bounded.svelte';
 
-	export let slice: Content.QuoteSlice;
+	interface Props {
+		slice: Content.QuoteSlice;
+	}
+
+	let { slice }: Props = $props();
 </script>
 
 <Bounded

@@ -6,7 +6,11 @@
 	import ImageCard from './ImageCard.svelte';
 	import Heading from '$lib/components/Heading.svelte';
 
-	export let slice: Content.ImageCardsSlice;
+	interface Props {
+		slice: Content.ImageCardsSlice;
+	}
+
+	let { slice }: Props = $props();
 </script>
 
 <Bounded

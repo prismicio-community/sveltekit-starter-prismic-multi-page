@@ -5,7 +5,11 @@
 	import Bounded from '$lib/components/Bounded.svelte';
 	import PrismicRichText from '$lib/components/PrismicRichText.svelte';
 
-	export let slice: Content.TextWithImageSlice;
+	interface Props {
+		slice: Content.TextWithImageSlice;
+	}
+
+	let { slice }: Props = $props();
 </script>
 
 <Bounded

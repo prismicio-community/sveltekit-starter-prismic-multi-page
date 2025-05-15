@@ -13,8 +13,12 @@
 	import Strong from './PrismicRichText/Strong.svelte';
 	import Hyperlink from './PrismicRichText/Hyperlink.svelte';
 
-	export let field: ComponentProps<PrismicRichText>['field'];
-	export let components: ComponentProps<PrismicRichText>['components'] = {};
+	interface Props {
+		field: ComponentProps<PrismicRichText>['field'];
+		components?: ComponentProps<PrismicRichText>['components'];
+	}
+
+	let { field, components = {} }: Props = $props();
 </script>
 
 <PrismicRichText

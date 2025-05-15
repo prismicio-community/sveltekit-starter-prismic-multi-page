@@ -4,7 +4,11 @@
 
 	import PrismicRichText from '$lib/components/PrismicRichText.svelte';
 
-	export let card: Content.ImageCardsSliceDefaultPrimaryCardsItem;
+	interface Props {
+		card: Content.ImageCardsSliceDefaultPrimaryCardsItem;
+	}
+
+	let { card }: Props = $props();
 </script>
 
 <li class="grid gap-8">
