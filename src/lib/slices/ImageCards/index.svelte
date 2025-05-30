@@ -1,12 +1,15 @@
 <script lang="ts">
 	import { isFilled, type Content } from '@prismicio/client';
 	import { PrismicText } from '@prismicio/svelte';
-
 	import Bounded from '$lib/components/Bounded.svelte';
 	import ImageCard from './ImageCard.svelte';
 	import Heading from '$lib/components/Heading.svelte';
 
-	export let slice: Content.ImageCardsSlice;
+	type Props = {
+		slice: Content.ImageCardsSlice;
+	};
+
+	const { slice }: Props = $props();
 </script>
 
 <Bounded

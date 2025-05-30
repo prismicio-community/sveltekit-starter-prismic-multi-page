@@ -1,11 +1,14 @@
 <script lang="ts">
 	import type { Content } from '@prismicio/client';
 	import clsx from 'clsx';
-
 	import Bounded from '$lib/components/Bounded.svelte';
 	import PrismicRichText from '$lib/components/PrismicRichText.svelte';
 
-	export let slice: Content.TextSlice;
+	type Props = {
+		slice: Content.TextSlice;
+	};
+
+	const { slice }: Props = $props();
 </script>
 
 <Bounded

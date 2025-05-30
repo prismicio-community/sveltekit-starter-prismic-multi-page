@@ -2,10 +2,13 @@
 	import { isFilled, type Content } from '@prismicio/client';
 	import { PrismicText } from '@prismicio/svelte';
 	import clsx from 'clsx';
-
 	import Bounded from '$lib/components/Bounded.svelte';
 
-	export let slice: Content.QuoteSlice;
+	type Props = {
+		slice: Content.QuoteSlice;
+	};
+
+	const { slice }: Props = $props();
 </script>
 
 <Bounded
