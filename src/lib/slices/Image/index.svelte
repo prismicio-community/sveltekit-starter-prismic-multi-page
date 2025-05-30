@@ -2,11 +2,14 @@
 	import { isFilled, type Content } from '@prismicio/client';
 	import { PrismicImage } from '@prismicio/svelte';
 	import clsx from 'clsx';
-
 	import Bounded from '$lib/components/Bounded.svelte';
 
-	export let slice: Content.ImageSlice;
-	export let index: number;
+	type Props = {
+		slice: Content.ImageSlice;
+		index: number;
+	};
+
+	const { slice, index }: Props = $props();
 </script>
 
 <Bounded
