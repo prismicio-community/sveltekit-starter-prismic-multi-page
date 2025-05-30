@@ -1,13 +1,11 @@
 <script lang="ts">
 	import { isFilled, type Content } from '@prismicio/client';
-	import { PrismicImage, PrismicLink } from '@prismicio/svelte';
+	import { PrismicImage, PrismicLink, type SliceComponentProps } from '@prismicio/svelte';
 	import Bounded from '$lib/components/Bounded.svelte';
 	import PrismicRichText from '$lib/components/PrismicRichText.svelte';
 	import Heading from './Heading.svelte';
 
-	type Props = {
-		slice: Content.HeroSlice;
-	};
+	type Props = SliceComponentProps<Content.HeroSlice>;
 
 	const { slice }: Props = $props();
 </script>

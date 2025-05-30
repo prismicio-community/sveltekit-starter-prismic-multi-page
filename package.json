@@ -16,7 +16,7 @@
 	},
 	"dependencies": {
 		"@prismicio/client": "^7.17.3",
-		"@prismicio/svelte": "^2.0.0-alpha.1",
+		"@prismicio/svelte": "file:../prismic-svelte/prismicio-svelte-2.0.0-alpha.1.tgz",
 		"clsx": "^2.1.1"
 	},
 	"devDependencies": {
