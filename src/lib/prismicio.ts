@@ -1,4 +1,4 @@
-import * as prismic from '@prismicio/client';
+import { createClient as baseCreateClient, type Route } from '@prismicio/client';
 import { type CreateClientConfig, enableAutoPreviews } from '@prismicio/svelte/kit';
 import sm from '../../slicemachine.config.json';
 
@@ -12,7 +12,7 @@ export const repositoryName = import.meta.env.VITE_PRISMIC_ENVIRONMENT || sm.rep
  *
  * {@link https://prismic.io/docs/route-resolver#route-resolver}
  */
-const routes: prismic.ClientConfig['routes'] = [
+const routes: Route[] = [
 	{ type: 'page', path: '/:uid' },
 	{ type: 'page', uid: 'home', path: '/' },
 	{ type: 'settings', path: '/' },
@@ -26,7 +26,7 @@ const routes: prismic.ClientConfig['routes'] = [
  * @param config - Configuration for the Prismic client.
  */
 export const createClient = ({ cookies, ...config }: CreateClientConfig = {}) => {
-	const client = prismic.createClient(repositoryName, {
+	const client = baseCreateClient(repositoryName, {
 		routes,
 		...config
 	});

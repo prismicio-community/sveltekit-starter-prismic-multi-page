@@ -1,10 +1,7 @@
 import { asText } from '@prismicio/client';
 
 import { createClient } from '$lib/prismicio';
-
-import { asText } from '@prismicio/client';
-import { createClient } from '$lib/prismicio';
-import type { PageServerLoad } from './$types';
+import type { EntryGenerator, PageServerLoad } from './$types';
 
 export const load: PageServerLoad = async ({ fetch, cookies }) => {
 	const client = createClient({ fetch, cookies });
@@ -19,6 +16,6 @@ export const load: PageServerLoad = async ({ fetch, cookies }) => {
 	};
 };
 
-export function entries() {
+export const entries: EntryGenerator = () => {
 	return [{}];
-}
+};

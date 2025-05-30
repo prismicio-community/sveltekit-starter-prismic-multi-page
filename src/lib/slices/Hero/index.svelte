@@ -31,7 +31,7 @@
 			{#if isFilled.link(slice.primary.buttonLink)}
 				<PrismicLink
 					field={slice.primary.buttonLink}
-					class="rounded bg-white px-5 py-3 font-medium text-slate-800"
+					class="rounded-sm bg-white px-5 py-3 font-medium text-slate-800"
 				>
 					{slice.primary.buttonText || 'Learn More'}
 				</PrismicLink>
