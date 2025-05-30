@@ -11,12 +11,7 @@
 	const { slice }: Props = $props();
 </script>
 
-<Bounded
-	as="section"
-	class="bg-white leading-relaxed"
-	data-slice-type={slice.slice_type}
-	data-slice-variation={slice.variation}
->
+<Bounded tag="section" class="bg-white leading-relaxed">
 	<div class={clsx(slice.variation === 'twoColumns' && 'md:columns-2 md:gap-6')}>
 		<PrismicRichText field={slice.primary.text} />
 	</div>

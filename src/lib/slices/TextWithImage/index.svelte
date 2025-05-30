@@ -11,12 +11,7 @@
 	const { slice }: Props = $props();
 </script>
 
-<Bounded
-	as="section"
-	class="bg-white"
-	data-slice-type={slice.slice_type}
-	data-slice-variation={slice.variation}
->
+<Bounded tag="section" class="bg-white">
 	<div class="grid grid-cols-1 items-center gap-8 md:grid-cols-2">
 		<div>
 			<PrismicRichText field={slice.primary.text} />

@@ -11,12 +11,7 @@
 	const { slice }: Props = $props();
 </script>
 
-<Bounded
-	as="section"
-	class="bg-white"
-	data-slice-type={slice.slice_type}
-	data-slice-variation={slice.variation}
->
+<Bounded tag="section" class="bg-white">
 	{#if isFilled.richText(slice.primary.quote)}
 		<figure class="grid gap-6">
 			<blockquote>

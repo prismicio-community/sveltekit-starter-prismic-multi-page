@@ -10,11 +10,7 @@
 	const { slice }: Props = $props();
 </script>
 
-<section
-	class="relative bg-slate-900 text-white"
-	data-slice-type={slice.slice_type}
-	data-slice-variation={slice.variation}
->
+<section class="relative bg-slate-900 text-white">
 	{#if isFilled.image(slice.primary.backgroundImage)}
 		<PrismicImage
 			field={slice.primary.backgroundImage}
