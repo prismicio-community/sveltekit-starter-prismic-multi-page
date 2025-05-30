@@ -39,7 +39,7 @@
 		"slice-machine-ui": "^2.16.0",
 		"svelte": "^5.33.10",
 		"svelte-check": "^4.2.1",
-		"tailwindcss": "^4.1.8",
+		"tailwindcss": "^3.4.4",
 		"tslib": "^2.8.1",
 		"typescript": "^5.8.3",
 		"typescript-eslint": "^8.33.0",
