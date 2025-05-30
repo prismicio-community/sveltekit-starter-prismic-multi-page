@@ -2,9 +2,12 @@ import { asText } from '@prismicio/client';
 
 import { createClient } from '$lib/prismicio';
 
-export async function load({ fetch, cookies }) {
-	const client = createClient({ fetch, cookies });
+import { asText } from '@prismicio/client';
+import { createClient } from '$lib/prismicio';
+import type { PageServerLoad } from './$types';
 
+export const load: PageServerLoad = async ({ fetch, cookies }) => {
+	const client = createClient({ fetch, cookies });
 	const page = await client.getByUID('page', 'home');
 
 	return {
@@ -14,7 +17,7 @@ export async function load({ fetch, cookies }) {
 		meta_title: page.data.meta_title,
 		meta_image: page.data.meta_image.url
 	};
-}
+};
 
 export function entries() {
 	return [{}];

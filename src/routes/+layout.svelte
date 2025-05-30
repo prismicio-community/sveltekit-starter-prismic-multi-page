@@ -1,12 +1,11 @@
 <script lang="ts">
 	import '../app.css';
-
 	import { PrismicPreview } from '@prismicio/svelte/kit';
 	import { page } from '$app/stores';
 	import { repositoryName } from '$lib/prismicio';
 	import Header from '$lib/components/Header.svelte';
 
-	export let data;
+	const { data } = $props();
 </script>
 
 <svelte:head>
