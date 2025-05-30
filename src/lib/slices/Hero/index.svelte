@@ -1,13 +1,15 @@
 <script lang="ts">
 	import { isFilled, type Content } from '@prismicio/client';
 	import { PrismicImage, PrismicLink } from '@prismicio/svelte';
-
 	import Bounded from '$lib/components/Bounded.svelte';
 	import PrismicRichText from '$lib/components/PrismicRichText.svelte';
-
 	import Heading from './Heading.svelte';
 
-	export let slice: Content.HeroSlice;
+	type Props = {
+		slice: Content.HeroSlice;
+	};
+
+	const { slice }: Props = $props();
 </script>
 
 <section
