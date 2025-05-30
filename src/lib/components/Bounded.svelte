@@ -1,9 +1,15 @@
 <script lang="ts">
+	import type { Snippet } from 'svelte';
 	import clsx from 'clsx';
 
-	export let tag = 'section';
-	export let yPadding: 'sm' | 'base' | 'lg' = 'base';
-	export let collapsible = true;
+	type Props = {
+		tag?: string;
+		yPadding?: 'sm' | 'base' | 'lg';
+		collapsible?: boolean;
+		children: Snippet;
+	};
+
+	const { tag = 'section', yPadding = 'base', collapsible = true, children }: Props = $props();
 </script>
 
 <svelte:element
