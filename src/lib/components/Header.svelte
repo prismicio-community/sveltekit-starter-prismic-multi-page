@@ -1,11 +1,14 @@
 <script lang="ts">
 	import type { Content } from '@prismicio/client';
 	import { PrismicLink, PrismicText } from '@prismicio/svelte';
-
 	import Bounded from './Bounded.svelte';
 
-	export let settings: Content.SettingsDocument;
-	export let navigation: Content.NavigationDocument;
+	type Props = {
+		settings: Content.SettingsDocument;
+		navigation: Content.NavigationDocument;
+	};
+
+	const { settings, navigation }: Props = $props();
 </script>
 
 <Bounded tag="header" yPadding="sm">
@@ -15,7 +18,7 @@
 		</a>
 		<nav>
 			<ul class="flex flex-wrap gap-6 md:gap-10">
-				{#each navigation.data?.links as item}
+				{#each navigation.data?.links as item (item.label)}
 					<li class="font-semibold tracking-tight text-slate-800">
 						<PrismicLink field={item.link}>
 							<PrismicText field={item.label} />

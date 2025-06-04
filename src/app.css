@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
 [data-collapsible].bg-white + [data-collapsible].bg-white,
 [data-collapsible].bg-slate-100 + [data-collapsible].bg-slate-100 {

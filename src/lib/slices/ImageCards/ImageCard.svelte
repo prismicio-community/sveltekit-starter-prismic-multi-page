@@ -1,10 +1,13 @@
 <script lang="ts">
 	import { isFilled, type Content } from '@prismicio/client';
 	import { PrismicImage, PrismicLink } from '@prismicio/svelte';
-
 	import PrismicRichText from '$lib/components/PrismicRichText.svelte';
 
-	export let card: Content.ImageCardsSliceDefaultPrimaryCardsItem;
+	type Props = {
+		card: Content.ImageCardsSliceDefaultPrimaryCardsItem;
+	};
+
+	const { card }: Props = $props();
 </script>
 
 <li class="grid gap-8">

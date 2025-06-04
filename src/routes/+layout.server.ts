@@ -1,8 +1,9 @@
 import { createClient } from '$lib/prismicio';
+import type { LayoutServerLoad } from './$types';
 
 export const prerender = 'auto';
 
-export async function load({ fetch, cookies }) {
+export const load: LayoutServerLoad = async ({ fetch, cookies }) => {
 	const client = createClient({ fetch, cookies });
 
 	const settings = await client.getSingle('settings');
@@ -12,4 +13,4 @@ export async function load({ fetch, cookies }) {
 		settings,
 		navigation
 	};
-}
+};

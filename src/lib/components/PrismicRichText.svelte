@@ -1,6 +1,6 @@
 <script lang="ts">
-	import type { ComponentProps } from 'svelte';
-	import { PrismicRichText } from '@prismicio/svelte';
+	import type { RichTextField } from '@prismicio/client';
+	import { PrismicRichText, type RichTextComponents } from '@prismicio/svelte';
 	import Heading1 from './PrismicRichText/Heading1.svelte';
 	import Heading2 from './PrismicRichText/Heading2.svelte';
 	import Heading3 from './PrismicRichText/Heading3.svelte';
@@ -13,8 +13,12 @@
 	import Strong from './PrismicRichText/Strong.svelte';
 	import Hyperlink from './PrismicRichText/Hyperlink.svelte';
 
-	export let field: ComponentProps<PrismicRichText>['field'];
-	export let components: ComponentProps<PrismicRichText>['components'] = {};
+	type Props = {
+		field: RichTextField;
+		components?: RichTextComponents;
+	};
+
+	const { field, components = {} }: Props = $props();
 </script>
 
 <PrismicRichText

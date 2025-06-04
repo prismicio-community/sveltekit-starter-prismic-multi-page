@@ -2,18 +2,16 @@
 	import { isFilled, type Content } from '@prismicio/client';
 	import { PrismicText } from '@prismicio/svelte';
 	import clsx from 'clsx';
-
 	import Bounded from '$lib/components/Bounded.svelte';
 
-	export let slice: Content.QuoteSlice;
+	type Props = {
+		slice: Content.QuoteSlice;
+	};
+
+	const { slice }: Props = $props();
 </script>
 
-<Bounded
-	as="section"
-	class="bg-white"
-	data-slice-type={slice.slice_type}
-	data-slice-variation={slice.variation}
->
+<Bounded tag="section" class="bg-white">
 	{#if isFilled.richText(slice.primary.quote)}
 		<figure class="grid gap-6">
 			<blockquote>

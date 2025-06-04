@@ -1,20 +1,16 @@
 <script lang="ts">
 	import { isFilled, type Content } from '@prismicio/client';
-	import { PrismicImage, PrismicLink } from '@prismicio/svelte';
-
+	import { PrismicImage, PrismicLink, type SliceComponentProps } from '@prismicio/svelte';
 	import Bounded from '$lib/components/Bounded.svelte';
 	import PrismicRichText from '$lib/components/PrismicRichText.svelte';
-
 	import Heading from './Heading.svelte';
 
-	export let slice: Content.HeroSlice;
+	type Props = SliceComponentProps<Content.HeroSlice>;
+
+	const { slice }: Props = $props();
 </script>
 
-<section
-	class="relative bg-slate-900 text-white"
-	data-slice-type={slice.slice_type}
-	data-slice-variation={slice.variation}
->
+<section class="relative bg-slate-900 text-white">
 	{#if isFilled.image(slice.primary.backgroundImage)}
 		<PrismicImage
 			field={slice.primary.backgroundImage}
@@ -35,7 +31,7 @@
 			{#if isFilled.link(slice.primary.buttonLink)}
 				<PrismicLink
 					field={slice.primary.buttonLink}
-					class="rounded bg-white px-5 py-3 font-medium text-slate-800"
+					class="rounded-sm bg-white px-5 py-3 font-medium text-slate-800"
 				>
 					{slice.primary.buttonText || 'Learn More'}
 				</PrismicLink>
