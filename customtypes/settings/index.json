@@ -1,20 +1,20 @@
 {
-	"id": "settings",
-	"label": "Settings",
-	"format": "custom",
-	"repeatable": false,
-	"status": true,
-	"json": {
-		"Main": {
-			"siteTitle": {
-				"type": "StructuredText",
-				"config": {
-					"label": "Site Title",
-					"placeholder": "Title of the site",
-					"allowTargetBlank": false,
-					"single": "heading1"
-				}
-			}
-		}
-	}
+  "id": "settings",
+  "label": "Settings",
+  "repeatable": false,
+  "json": {
+    "Main": {
+      "siteTitle": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Site Title",
+          "placeholder": "Title of the site",
+          "single": "heading1",
+          "allowTargetBlank": false
+        }
+      }
+    }
+  },
+  "status": true,
+  "format": "custom"
 }

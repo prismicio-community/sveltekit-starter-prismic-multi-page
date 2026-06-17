@@ -13,17 +13,12 @@ Want to see an example of a multi-page website using [Prismic][prismic] and [Sve
 
 ## 🚀 Quick Start
 
-To start a new project using this starter, run the following commands in your terminal:
+To start a new project using this starter:
 
-```sh
-npx @slicemachine/init@latest --starter sveltekit-starter-prismic-multi-page
-```
-
-The commands will do the following:
-
-1. Start a new SvelteKit project using this starter.
-2. Ask you to log in to Prismic or [create an account][prismic-sign-up].
-3. Create a new Prismic content repository with sample content.
+1. Visit <https://prismic.io/dashboard>.
+2. Create a new Prismic repository by selecting **SvelteKit**.
+3. Select the **Multi-Page starter**.
+4. Fill out your repository details and continue with the steps given in Prismic.
 
 When you're ready to start your project, run the following command:
 
